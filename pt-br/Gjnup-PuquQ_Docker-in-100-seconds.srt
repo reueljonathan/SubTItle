@@ -1,0 +1,248 @@
+1
+00:00:00,001 --> 00:00:00,668
+Docker
+
+2
+00:00:00,693 --> 00:00:03,150
+uma ferramenta que pode
+"empacotar" software em containers
+
+3
+00:00:03,175 --> 00:00:05,158
+que podem ser executados de
+maneira confiável em qualquer ambiente.
+
+4
+00:00:05,405 --> 00:00:06,362
+Mas o que é um "container"?
+
+5
+00:00:06,386 --> 00:00:07,455
+E por que você precisa de um?
+
+6
+00:00:07,456 --> 00:00:08,976
+Vamos imaginar que você construiu uma aplicação em COBOL
+
+7
+00:00:08,977 --> 00:00:10,875
+que roda em uma distribuição linux qualquer.
+
+8
+00:00:10,908 --> 00:00:12,212
+Você quer compartilhar essa aplicação com um amigo,
+
+9
+00:00:12,212 --> 00:00:13,888
+mas ele tem um ambiente completamente diferente do seu.
+
+10
+00:00:13,889 --> 00:00:16,299
+Então, a pergunta agora é: "Como replicar o ambiente que nosso
+
+11
+00:00:16,300 --> 00:00:17,790
+software precisa em qualquer máquina?"
+
+12
+00:00:18,084 --> 00:00:20,294
+Uma maneira de "empacotar" uma aplicação é usando máquinas virtuais (VM)
+
+13
+00:00:20,295 --> 00:00:21,295
+onde o hardware é simulado
+
+14
+00:00:21,296 --> 00:00:24,106
+e instalado com o sistema operacional e
+as dependências necessárias.
+
+15
+00:00:24,357 --> 00:00:27,127
+Isso nos permite executar diferentes apps com a mesma infraestrutura
+
+16
+00:00:27,128 --> 00:00:30,188
+Entretanto, já que cada VM tem seu próprio sistema operacional
+
+17
+00:00:30,189 --> 00:00:32,098
+elas têm a tendência de serem volumosas e lentas.
+
+18
+00:00:32,100 --> 00:00:35,461
+Agora, um container docker é conceitualmente muito semelhante à uma VM
+
+19
+00:00:35,462 --> 00:00:36,462
+mas com uma diferença chave:
+
+20
+00:00:36,703 --> 00:00:40,283
+Ao invés de virtualizar o hardware,
+containers somente virtualizam o OS (sistema operacional)
+
+21
+00:00:40,284 --> 00:00:42,714
+Em outras palavras, todas as aplicações (ou containers)
+
+22
+00:00:42,715 --> 00:00:44,165
+são executadas por um único kernel
+
+23
+00:00:44,166 --> 00:00:46,524
+e isso torna tudo mais rápido e eficiente.
+
+24
+00:00:46,827 --> 00:00:49,807
+Existem três elementos fundamentais no universo Docker:
+
+25
+00:00:49,808 --> 00:00:50,808
+O dockerfile,
+
+26
+00:00:50,809 --> 00:00:51,617
+a imagem,
+
+27
+00:00:51,618 --> 00:00:52,518
+e o container.
+
+28
+00:00:52,652 --> 00:00:54,502
+O dockerfile é como o DNA:
+
+29
+00:00:54,503 --> 00:00:57,743
+é apenas um código que diz ao docker como construir (build) uma imagem,
+
+30
+00:00:57,744 --> 00:01:00,134
+que por sua vez [a imagem] é uma "foto" (snapshot) do seu software
+
+31
+00:01:00,135 --> 00:01:03,185
+junto com todas as suas dependências até o nível do sistema operacional.
+
+32
+00:01:03,186 --> 00:01:04,256
+A imagem é imutável
+
+33
+00:01:04,431 --> 00:01:06,791
+e pode ser usada para iniciar múltiplos containers
+
+34
+00:01:06,800 --> 00:01:09,360
+[containers] que são o software de fato sendo executados num ambiente real.
+
+35
+00:01:09,432 --> 00:01:10,432
+Crie um Dockerfile
+
+36
+00:01:10,456 --> 00:01:12,781
+e use FROM para começar a partir de
+um template existente
+
+37
+00:01:12,806 --> 00:01:13,623
+como Ubuntu, por exemplo.
+
+38
+00:01:13,648 --> 00:01:15,806
+Essa imagem base é baixada
+da nuvem
+
+39
+00:01:15,831 --> 00:01:17,935
+e você também pode fazer o 
+upload das suas imagens
+
+40
+00:01:17,960 --> 00:01:19,681
+para uma variedade de diferentes
+"Docker Registries".
+
+41
+00:01:19,706 --> 00:01:22,570
+A partir dai, você pode querer usar RUN
+para executar comandos de terminal
+
+42
+00:01:22,600 --> 00:01:24,467
+para instalar as dependências na sua imagem.
+
+43
+00:01:24,492 --> 00:01:27,184
+Você pode setar variáveis de ambiente e
+fazer todo tipo de coisas
+
+44
+00:01:27,209 --> 00:01:29,480
+e a última coisa que vamos fazer é
+definir um comando padrão
+
+45
+00:01:29,505 --> 00:01:31,269
+que é executado quando você
+inicia um container.
+
+46
+00:01:31,294 --> 00:01:34,688
+E agora, podemos criar a imagem rodando o
+comando "docker build".
+
+47
+00:01:34,730 --> 00:01:38,468
+Ele passa por cada passo do dockerfile
+para construir a imagem camada por camada.
+
+48
+00:01:38,653 --> 00:01:42,523
+Agora podemos trazer a imagem à vida
+como um container rodando o comando "docker run".
+
+49
+00:01:42,663 --> 00:01:45,087
+À medida que seu app necessita de mais
+recursos, você pode rodá-lo em
+
+50
+00:01:45,112 --> 00:01:46,852
+múltiplas máquinas, múltiplos "clouds"
+
+51
+00:01:46,877 --> 00:01:49,172
+<i>on-prem</i>, ou onde você quiser, de
+uma maneira confiável.
+
+52
+00:01:49,257 --> 00:01:51,376
+Esse foi o "Docker em 100 segundos"
+
+53
+00:01:51,401 --> 00:01:53,611
+Se você gostou, não se esqueça de deixar o
+like e de se inscrever
+
+54
+00:01:53,636 --> 00:01:56,640
+E fique antenado para mais conteúdo sobre
+Docker em breve neste canal.
+
+55
+00:01:56,665 --> 00:01:59,161
+Obrigado por assistir, e
+te vejo na próxima.
+
+56
+00:02:02,079 --> 00:02:03,495
+OBRIGADO POR ASSISTIR!
+
+57
+00:02:03,520 --> 00:02:06,483
+legendado por @reueljonathan
+
