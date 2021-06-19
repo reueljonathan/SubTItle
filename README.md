@@ -33,3 +33,23 @@
 2. I don't have any formal education in any field related with natural languages. I'm just a developer that has learned (and is still learning) the English to improve my work.
 3. Eventually, you (or someone else) will find some mistakes. PRs are welcome. =)
 4. If you want to contribute with subtitles to a file that is not in the list, just open a PR. Again, PRs are welcome. =)
+
+# Como usar as legendas (How to use the subtitles)
+
+## Se você é o criador do vídeo (If you are the video owner)
+
+Se você é o dono de um vídeo que foi traduzido e tem uma legenda escrita nesse repositório, sinta-se à vontade em incluir a legenda no seu vídeo no Youtube (o conteúdo é seu de qualquer maneira).
+Um link em seu conteúdo que redirecione para esse repositório seria de grande valia, mas não é necessário.
+
+If you are the creator of one of the videos that have translations, be free to include them (or not) in your youtube channel (it is your content anyway). A link to this repository would be highly appreciated (so more people can get here), but
+it is not necessary.
+
+## Se você é apenas um _viewer_. (If you are only a viewer)
+
+Se você é apenas um _viewer_, existem pelo menos duas alternativas para usar essas legendas:
+1. Torcer para que o criador do conteúdo inclua essas legendas no seu canal e você consiga usar direto pelo Youtube
+2. Usar um software externo para ver o vídeo e incluir as legendas (como o VLC, por exemplo)
+
+If you are just a viewer, there are at least two ways of using these subtitles:
+1. Hope that the content creator will get here and include the subtitle file in its Youtube video
+2. Use external software to watch the video and load the subtitles file by yourself (for example, using VLC player)
