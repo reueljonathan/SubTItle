@@ -1,0 +1,266 @@
+﻿1
+00:00:00,276 --> 00:00:00,888
+React:
+
+2
+00:00:00,913 --> 00:00:03,881
+Uma biblioteca JavaScript para criar 
+interfaces de usuário (UI).
+
+3
+00:00:03,906 --> 00:00:06,185
+Desenvolvida pelo Facebook e
+lançada em 2013
+
+4
+00:00:06,210 --> 00:00:09,053
+É seguro dizer que React é
+a biblioteca de UI mais influente
+
+5
+00:00:09,078 --> 00:00:10,055
+dos últimos tempos.
+
+6
+00:00:10,080 --> 00:00:11,585
+Nós a usamos para construir componentes
+
+7
+00:00:11,610 --> 00:00:14,537
+que representam partes da UI
+e que são reutilizáveis.
+
+8
+00:00:14,562 --> 00:00:17,787
+A beleza da [biblioteca] React é que a
+simplicidade de criar um componente
+
+9
+00:00:17,812 --> 00:00:20,024
+é oferecida pelo que
+teoricamente é o mínimo:
+
+10
+00:00:20,049 --> 00:00:21,774
+Um compontente é apenas
+uma função JavaScript.
+
+11
+00:00:21,799 --> 00:00:24,124
+<i>"É tão fácil que até um homem 
+das cavernas consegue fazer!"</i>
+
+12
+00:00:24,149 --> 00:00:27,338
+O retorno dessa função é o seu HTML (ou UI)
+
+13
+00:00:27,363 --> 00:00:30,137
+que é escrita em uma sintaxe 
+especial chamada JSX
+
+14
+00:00:30,162 --> 00:00:33,491
+que te permite combinar tags HTML e 
+JavaScript de maneira simples.
+
+15
+00:00:33,516 --> 00:00:35,391
+Se você quiser passar dados para um
+componente
+
+16
+00:00:35,416 --> 00:00:37,239
+você simplesmente passa um argumento <i>props</i>
+
+17
+00:00:37,264 --> 00:00:40,967
+que você pode referenciar dentro do corpo
+da função ou na UI usando chaves.
+
+18
+00:00:40,992 --> 00:00:42,210
+Se o valor for alterado
+
+19
+00:00:42,235 --> 00:00:44,878
+o React vai reagir (<i>"react"</i>)
+e atualizar a UI.
+
+20
+00:00:44,903 --> 00:00:47,397
+Caso você queira dar ao componente
+um estado (<i>state</i>) próprio
+
+21
+00:00:47,422 --> 00:00:48,635
+então podemos usar o <i>hook</i>
+<i>useState</i>.
+
+22
+00:00:48,660 --> 00:00:51,481
+Um <i>hook</i> é apenas uma função que
+retorna um valor
+
+23
+00:00:51,506 --> 00:00:53,670
+como também retorna uma função
+para alterar esse valor.
+
+24
+00:00:53,695 --> 00:00:55,937
+Nesse caso, <i>count</i> é um 
+estado reativo (<i>state</i>)
+
+25
+00:00:55,962 --> 00:00:57,880
+e <i>setCount()</i> é uma função para
+alterar esse <i>state</i>.
+
+26
+00:00:57,905 --> 00:01:01,236
+Quando usado em um template, <i>count</i> sempre
+vai exibir o valor mais recente.
+
+27
+00:01:01,261 --> 00:01:03,409
+e podemos vincular o <i>setCount</i>
+ao clique de um botão
+
+28
+00:01:03,434 --> 00:01:05,235
+para que o usuário possa alterar o <i>state</i>.
+
+29
+00:01:05,260 --> 00:01:07,289
+React também inclui uma série de 
+outros <i>hooks</i>
+
+30
+00:01:07,314 --> 00:01:08,888
+para lidar com casos de usos comuns.
+
+31
+00:01:08,913 --> 00:01:11,990
+Mas a principal razão que talvez você
+queira usar React não seja a biblioteca,
+
+32
+00:01:12,015 --> 00:01:14,088
+mas o enorme ecossistema que gira
+em torno dela.
+
+33
+00:01:14,113 --> 00:01:16,138
+React não se preocupa com <i>routing</i>
+
+34
+00:01:16,163 --> 00:01:18,527
+<i>state management</i>, animações, ou
+qualquer coisa do tipo.
+
+35
+00:01:18,552 --> 00:01:20,903
+Ao invés disso, ele permite que 
+essas preocupações evoluam
+
+36
+00:01:20,928 --> 00:01:22,221
+naturalmente com a comunidade 
+<i>open source</i>.
+
+37
+00:01:22,246 --> 00:01:24,776
+Não importa o que você queira fazer,
+provavelmente existe uma biblioteca
+
+38
+00:01:24,801 --> 00:01:26,616
+com um bom suporte para resolver seu problema.
+
+39
+00:01:26,641 --> 00:01:28,439
+Precisa de um site estático?
+<i>Gatsby</i>.
+
+40
+00:01:28,467 --> 00:01:30,333
+Precisa de <i>Server-Side Rendering</i> (SSR)?
+<i>Next.js</i>.
+
+41
+00:01:30,358 --> 00:01:31,709
+Animações? <i>Spring</i>.
+
+42
+00:01:31,734 --> 00:01:33,035
+Formulários? <i>Formik</i>.
+
+43
+00:01:33,060 --> 00:01:34,150
+Manipular estados?
+<i></i>
+
+44
+00:01:34,178 --> 00:01:36,890
+<i>Redux, Mobx, Flux, Recoil, XState</i>
+e muito mais.
+
+45
+00:01:36,915 --> 00:01:40,142
+Você tem infinitas escolhas para resolver 
+os problemas do jeito que quiser.
+
+46
+00:01:40,167 --> 00:01:42,156
+E como um bônus, depois de aprender React
+
+47
+00:01:42,181 --> 00:01:45,214
+você pode facilmente pular para o <i>React Native</i>
+e começar a fazer aplicações mobile.
+
+48
+00:01:45,239 --> 00:01:47,577
+E não é surpresa que conhecendo 
+essa pequena biblioteca UI
+
+49
+00:01:47,602 --> 00:01:50,805
+é uma das habilidades mais procuradas em
+desenvolvedores atualmente.
+
+50
+00:01:50,830 --> 00:01:52,803
+Esse foi o "React em 100 segundos".
+
+51
+00:01:52,828 --> 00:01:54,333
+Se você quiser ver mais videos como esse
+
+52
+00:01:54,358 --> 00:01:55,921
+Dê seu like, se inscreva
+
+53
+00:01:55,946 --> 00:01:58,697
+e veja mais conteúdos avançados
+sobre React em <i>fireship.io</i>
+
+54
+00:01:58,722 --> 00:02:02,122
+E se você ficou curioso em saber como faço
+esses vídeos, veja meu canal pessoal
+
+55
+00:02:02,147 --> 00:02:03,650
+e o vídeo sobre esse tópico.
+
+56
+00:02:03,675 --> 00:02:06,020
+Obrigado por assistir, e te vejo na próxima!
+
+57
+00:02:06,045 --> 00:02:07,653
+github.com/reueljonathan/SubTItle
+
