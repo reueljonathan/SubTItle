@@ -1,0 +1,259 @@
+﻿1
+00:00:00,817 --> 00:00:01,420
+Redis
+
+2
+00:00:01,445 --> 00:00:03,421
+Um banco de dados em memória
+com multi-modelos (<i>multi-model</i>)
+
+3
+00:00:03,446 --> 00:00:05,794
+famoso por ter uma latência que 
+dura menos que milisegundos.
+
+4
+00:00:05,849 --> 00:00:07,611
+Ele foi criado em 2009
+
+5
+00:00:07,683 --> 00:00:11,651
+baseado na ideia de que um <i>cache</i> também
+poderia ser um <i>data store</i> durável.
+
+6
+00:00:11,698 --> 00:00:14,492
+Na época, apps como o <i>Twitter</i> estavam
+crescendo exponencialmente
+
+7
+00:00:14,525 --> 00:00:16,950
+e precisavam entregar dados 
+ao usuário final
+
+8
+00:00:16,975 --> 00:00:19,093
+mais rápido do que um banco relacional.
+
+9
+00:00:19,118 --> 00:00:21,386
+Redis
+(que siginfica <i>Servidor de Dicionário Remoto</i>)
+
+10
+00:00:21,411 --> 00:00:24,347
+foi adotado pelos sites com mais
+tráfego no mundo.
+
+11
+00:00:24,372 --> 00:00:27,419
+porque ele <i>[Redis]</i> mudou o 
+"jogo dos databases" ao criar um sistema
+
+12
+00:00:27,444 --> 00:00:31,046
+onde os dados eram sempre modificados 
+ou lidos da memória principal (RAM)
+
+13
+00:00:31,071 --> 00:00:33,077
+ao invés do disco (que é muito mais lento).
+
+14
+00:00:33,102 --> 00:00:35,919
+Ao mesmo tempo, ele salva
+seu estado no disco
+
+15
+00:00:35,944 --> 00:00:37,958
+e então o estado pode ser reconstruido
+quando necessário,
+
+16
+00:00:37,983 --> 00:00:39,990
+o que significa que ele é totalmente durável
+
+17
+00:00:40,015 --> 00:00:42,363
+e suporta coisas como <i>snapshots</i> e <i>backups</i>.
+
+18
+00:00:42,388 --> 00:00:44,792
+Cada dado é representado
+por uma chave (<i>key</i>)
+
+19
+00:00:44,817 --> 00:00:47,363
+seguido por uma das muitas
+estruturas de dados (<i>value</i>)
+
+20
+00:00:47,388 --> 00:00:49,911
+como <i>strings, listas, hashes</i> e <i>streams</i>
+
+21
+00:00:49,936 --> 00:00:53,601
+e assim você pode salvar dados naturalmente
+como faria em uma linguagem de programação
+
+22
+00:00:53,626 --> 00:00:57,374
+ao invés de espremê-los em tabelas
+ou documentos <i>JSON</i>.
+
+23
+00:00:57,399 --> 00:01:00,533
+A interação com o <i>database</i> é feita com
+um conjunto simples de comandos
+
+24
+00:01:00,558 --> 00:01:04,350
+como o "<i>SET</i>", seguindo de uma <i>key</i>
+e um <i>value</i>, para salvar dados
+
+25
+00:01:04,375 --> 00:01:07,347
+e o "<i>GET</i>", seguido por uma <i>key</i>
+para ler dados.
+
+26
+00:01:07,372 --> 00:01:10,506
+Historicamente, Redis ficou conhecido como
+um <i>Key-Value store</i> (armazenamento chave-valor)
+
+27
+00:01:10,531 --> 00:01:14,617
+e é usado como <i>cache</i> para fazer
+bancos relacionais mais rápidos em escala.
+
+28
+00:01:14,642 --> 00:01:16,934
+Mas aqui é onde sua mente vai explodir:
+
+29
+00:01:16,959 --> 00:01:19,942
+Redis pode perfeitamente ser usado
+como seu banco de dados principal.
+
+30
+00:01:19,967 --> 00:01:21,815
+e pode reduzir a complexidade
+dramaticamente
+
+31
+00:01:21,840 --> 00:01:26,292
+porque fazer apps rodarem rápido em escala
+é a primeira fonte de complexidade.
+
+32
+00:01:26,317 --> 00:01:28,911
+Com Redis, o seu banco de dados já é rápido
+
+33
+00:01:28,936 --> 00:01:31,133
+sem a necessidade de uma camada de cache.
+
+34
+00:01:31,158 --> 00:01:32,331
+Mas você pode estar pensando:
+
+35
+00:01:32,356 --> 00:01:34,363
+<i>"Como eu represento modelos complexos?"</i>
+
+36
+00:01:34,388 --> 00:01:37,355
+Hoje em dia, Redis é o que você poderia
+chamar de <i>multi-model database</i>
+
+37
+00:01:37,380 --> 00:01:39,784
+permitindo o uso de diferentes
+paradigmas de bancos de dados
+
+38
+00:01:39,809 --> 00:01:42,696
+com módulos <i>addons</i> que podem ser
+incluídos como necessários.
+
+39
+00:01:42,721 --> 00:01:45,657
+Se seus dados contém relacionamentos
+use <i>Redis Graph</i>
+
+40
+00:01:45,682 --> 00:01:47,053
+e faça queries com <i>Cypher</i>.
+
+41
+00:01:47,078 --> 00:01:50,657
+Ou use o módulo <i>JSON</i> (<i>RedisJSON</i>)
+para estruturar seus dados em uma hierarquia
+
+42
+00:01:50,682 --> 00:01:52,919
+como faria em um banco orientado
+à documentos.
+
+43
+00:01:52,944 --> 00:01:55,172
+E então use o módulo de busca (<i>RedisSearch</i>)
+para transformar seu database
+
+44
+00:01:55,197 --> 00:01:56,649
+em uma engine de busca textual.
+
+45
+00:01:56,674 --> 00:01:58,021
+Redis também tem módulos para
+
+46
+00:01:58,046 --> 00:02:00,680
+<i>AI workloads</i>, dados temporáis e muito mais.
+
+47
+00:02:00,705 --> 00:02:02,831
+O jeito mais rápido de começar é usando o
+plano gratuito (<i>Free-tier</i>)
+
+48
+00:02:02,856 --> 00:02:04,450
+na <i>Redis Enterprise Cloud</i>.
+
+49
+00:02:04,475 --> 00:02:06,712
+Você terá acesso a um
+database gratuito para testar
+
+50
+00:02:06,737 --> 00:02:08,776
+em que você pode adicionar um módulo extra.
+
+51
+00:02:08,801 --> 00:02:10,976
+E então você pode conectar 
+usando o <i>Redis CLI</i>
+
+52
+00:02:11,001 --> 00:02:15,460
+Ou com o <i>Redis Insight</i>, que contém um
+dashboard interativo para manipular os dados.
+
+53
+00:02:15,485 --> 00:02:18,833
+Esse foi "Redis em 100 segundos".
+Mas o que você acha?
+
+54
+00:02:18,858 --> 00:02:20,984
+Você usaria o Redis como seu banco primário?
+
+55
+00:02:21,009 --> 00:02:22,698
+Compartilhe comigo nos comentários.
+
+56
+00:02:22,723 --> 00:02:25,484
+Obrigado por assistir, e te vejo na próxima!
+
