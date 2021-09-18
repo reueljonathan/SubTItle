@@ -1,0 +1,130 @@
+﻿1
+00:00:00,119 --> 00:00:01,452
+Test Driven Development é baseado
+
+2
+00:00:01,477 --> 00:00:02,531
+numa ideia simples:
+
+3
+00:00:02,563 --> 00:00:04,921
+escrever o teste antes de 
+escrever o código.
+
+4
+00:00:04,946 --> 00:00:06,897
+Isso pode soar contraditório mas na verdade
+
+5
+00:00:06,922 --> 00:00:07,944
+é a melhor abordagem
+
+6
+00:00:07,969 --> 00:00:09,611
+em termos de qualidade, eficiência,
+
+7
+00:00:09,636 --> 00:00:11,595
+e durabilidade dos testes.
+
+8
+00:00:11,620 --> 00:00:12,747
+Quando escrevemos os testes
+
+9
+00:00:12,772 --> 00:00:14,214
+antes de escrever o código
+
+10
+00:00:14,239 --> 00:00:15,976
+podemos <i>testar</i> o teste
+ao executá-lo
+
+11
+00:00:16,001 --> 00:00:17,063
+e vê-lo falhar.
+
+12
+00:00:17,252 --> 00:00:19,339
+Se ele passar quando o código
+não foi escrito ainda
+
+13
+00:00:19,364 --> 00:00:21,419
+é bem óbvio que existe um
+problema com o teste.
+
+14
+00:00:21,521 --> 00:00:24,018
+Isso nos força a começar
+o design do nosso código
+
+15
+00:00:24,042 --> 00:00:25,379
+com a API pública
+
+16
+00:00:25,404 --> 00:00:27,665
+e assim encorajando o <i>design by contract</i>.
+
+17
+00:00:28,148 --> 00:00:30,712
+Existe um acoplamento fraco
+entre testes e código
+
+18
+00:00:30,737 --> 00:00:32,272
+então é mais provável que os testes
+
+19
+00:00:32,296 --> 00:00:34,275
+continuem funcionando quando
+o código mudar.
+
+20
+00:00:34,430 --> 00:00:36,378
+Isso nos encoraja a projetar
+nosso código
+
+21
+00:00:36,402 --> 00:00:38,196
+de uma maneira que
+ele seja testável,
+
+22
+00:00:38,221 --> 00:00:40,569
+E um código testável tem
+as mesmas propriedades
+
+23
+00:00:40,594 --> 00:00:42,633
+que valorizamos em códigos
+de alta qualidade.
+
+24
+00:00:42,712 --> 00:00:45,361
+De maneira geral, todo o processo
+de desenvolvimento de software
+
+25
+00:00:45,386 --> 00:00:46,942
+se torna mais rápido e eficiente
+
+26
+00:00:46,967 --> 00:00:50,339
+porque menos é gasto em retrabalho
+e corrigindo bugs.
+
+27
+00:00:50,683 --> 00:00:52,706
+Então resista a tentação de se apressar
+
+28
+00:00:52,731 --> 00:00:55,103
+e escrever o código primeiro.
+Isso é contraprodutivo.
+
+29
+00:00:55,128 --> 00:00:56,817
+Escreva os testes primeiro.
+
